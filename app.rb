@@ -13,17 +13,10 @@ get "/" do
   erb :index
 end
 
-#new input pages
-get "/user/new_user" do
-  erb :'user/new_user'
-end
+#new input page
 
-get "/comment/new_comment" do
-  erb :'comment/new_comment'
-end
-
-get "/article/new_article" do
-  erb :'article/new_article'
+get "/new" do
+  erb :new
 end
 
 #create new methods
