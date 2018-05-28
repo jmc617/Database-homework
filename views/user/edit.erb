@@ -1,0 +1,15 @@
+<h3>Edit/Update User</h3>
+
+<div>
+  Name: <%= @user.name %>
+</div>
+<hr>
+
+<form method="post" action="/update/user/<%= @user.id %>">
+  Name: <input type='text' name='name'>
+  <input type="submit" name="">
+</form>
+<hr>
+<form action="/destroy/user/<%= @user.id %>" method="post">
+  <button type="submit">Destroy</button>
+</form>

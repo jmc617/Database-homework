@@ -1,0 +1,19 @@
+<h3>Edit/Update Article</h3>
+
+<div>
+  Title: <%= @article.title %>
+</div>
+<div>
+  Author: <%= @article.author %>
+</div>
+<hr>
+
+<form method="post" action="/update/article/<%= @article.id %>">
+  Title: <input type='text' name='title'>
+  Author: <input type='text' name='author'>
+  <input type="submit" name="">
+</form>
+<hr>
+<form action="/destroy/article/<%= @article.id %>" method="post">
+  <button type="submit">Destroy</button>
+</form>

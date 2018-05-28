@@ -1,0 +1,32 @@
+<h3>User List</h3>
+
+<% @users.each do |user| %>
+  <a href="/show/<%= user.id %>/user/edit">
+    Name: <%=user.name%>
+  </a>
+  <hr>
+<% end %>
+
+<h3>Article List</h3>
+
+<% @articles.each do |article| %>
+  <a href="/show/<%= article.id %>/article/edit">
+    Title: <%=article.title%>
+  </a>
+  <div>
+    Author: <%=article.author%>
+  </div>
+  <hr>
+<% end %>
+
+<h3>Comment List</h3>
+
+<% @comments.each do |comment| %>
+  <a href="/show/<%= comment.id %>/comment/edit">
+    Content: <%=comment.content%>
+  </a>
+  <div>
+    Author: <%=comment.author%>
+  </div>
+  <hr>
+<% end %>

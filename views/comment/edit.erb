@@ -1,0 +1,19 @@
+<h3>Edit/Update Comment</h3>
+
+<div>
+  Content: <%= @comment.content %>
+</div>
+<div>
+  Author: <%= @comment.author %>
+</div>
+<hr>
+
+<form method="post" action="/update/comment/<%= @comment.id %>">
+  Content: <input type='text' name='content'>
+  Author: <input type='text' name='author'>
+  <input type="submit" name="">
+</form>
+<hr>
+<form action="/destroy/comment/<%= @comment.id %>" method="post">
+  <button type="submit">Destroy</button>
+</form>
